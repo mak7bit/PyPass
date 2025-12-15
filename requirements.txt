@@ -1,0 +1,4 @@
+PyQt6
+passlib
+bcrypt
+argon2-cffi
