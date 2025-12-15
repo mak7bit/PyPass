@@ -516,7 +516,7 @@ class MainWindow(QWidget):
         "Unauthorized password or hash cracking is illegal and strictly prohibited.\n"
         "Use this tool responsibly and respect the privacy and security of others.")
         disclaimer.setStyleSheet("font-size:13px; color: #808080; margin-left:10px;")
-        disclaimer.setContentsMargins(200, 10, 10, 10)
+        disclaimer.setContentsMargins(130, 10, 10, 10)
         disclaimer.setAlignment(Qt.AlignmentFlag.AlignCenter)
         title_credit_h.addWidget(disclaimer)
 
