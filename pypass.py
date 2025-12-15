@@ -520,11 +520,34 @@ class MainWindow(QWidget):
         disclaimer.setAlignment(Qt.AlignmentFlag.AlignCenter)
         title_credit_h.addWidget(disclaimer)
 
-        # Identify hash button on the right
         id_btn = QPushButton("Identify hash")
-        id_btn.setToolTip("Open hash identifier on hashes.com")
-        id_btn.clicked.connect(lambda: QDesktopServices.openUrl(QUrl("https://hashes.com/en/tools/hash_identifier")))
+        id_btn.setToolTip("Identify hash type")
+        id_btn.clicked.connect(
+           lambda: QDesktopServices.openUrl(
+               QUrl("https://hashes.com/en/tools/hash_identifier")
+           )
+        )
+ 
+        repo_btn = QPushButton("GitHub")
+        repo_btn.setToolTip("Open PyPass GitHub repository")
+        repo_btn.clicked.connect(
+            lambda: QDesktopServices.openUrl(
+                 QUrl("https://github.com/mak7bit/PyPass")
+            )
+        )
+
+        wordlist_btn = QPushButton("Get Wordlists")
+        wordlist_btn.setToolTip("Download wordlists from SecLists")
+        wordlist_btn.clicked.connect(
+            lambda: QDesktopServices.openUrl(
+                 QUrl("https://github.com/danielmiessler/SecLists")
+            )
+        )
+
         top_h.addWidget(id_btn)
+        top_h.addWidget(repo_btn)
+        top_h.addWidget(wordlist_btn)
+
 
         left_v = QVBoxLayout()
         wl_box = QGroupBox("Wordlist")
